@@ -33,4 +33,11 @@ public class BitManipulationBasicsTest {
         boolean result = underTest.isUnsignedIntegerPowerOfTwo(0);
         assertFalse(result);
     }
+
+    @Test
+    public void turnsOffRightMostBitOnUnsignedInteger() {
+        assertEquals(0, underTest.turnOffRightMostOneBitOnUnsignedInt(8));
+        assertEquals(80, underTest.turnOffRightMostOneBitOnUnsignedInt(88));
+        assertEquals(0, underTest.turnOffRightMostOneBitOnUnsignedInt(0));
+    }
 }

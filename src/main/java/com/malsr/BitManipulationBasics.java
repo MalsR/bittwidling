@@ -28,4 +28,13 @@ public class BitManipulationBasics {
         LOG.info("{} after bitwise AND {} ", number, bitwiseAndNumber);
         return (number != 0 && bitwiseAndNumber == 0);
     }
+
+    /**
+     * Turn off the right most 1-bit of an unsigned number x & (x - 1). e.g.
+     * 88 & (88 - 1) => 0101 1000 & 0101 0111 => 0101 0000
+     */
+    public int turnOffRightMostOneBitOnUnsignedInt(int number) {
+        LOG.info("turn off right most 1-bit {} & {}", number,  number - 1);
+        return (number & (number - 1));
+    }
 }
