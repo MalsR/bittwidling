@@ -7,11 +7,10 @@ import static org.junit.Assert.*;
 
 public class BitManipulationBasicsTest {
 
-    private BitManipulationBasics underTest;
+    private BitManipulationBasics underTest = new BitManipulationBasics();
 
     @Before
     public void setup() {
-        underTest = new BitManipulationBasics();
     }
 
     @Test

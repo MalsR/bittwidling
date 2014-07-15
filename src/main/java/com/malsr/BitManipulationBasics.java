@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class BitManipulationBasics {
 
-    private final Logger LOG = LoggerFactory.getLogger(BitManipulationBasics.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(BitManipulationBasics.class);
 
     /**
      * Simple function to determine if an unsigned integer is a power of 2^n. Performing the following bit level
@@ -25,7 +25,7 @@ public class BitManipulationBasics {
      */
     public boolean isUnsignedIntegerPowerOfTwo(int number) {
         int bitwiseAndNumber = number & (number - 1);
-        LOG.info("{} after bitwise AND {} ", number, bitwiseAndNumber);
+        LOGGER.info("{} after bitwise AND {} ", number, bitwiseAndNumber);
         return (number != 0 && bitwiseAndNumber == 0);
     }
 
@@ -34,7 +34,7 @@ public class BitManipulationBasics {
      * 88 & (88 - 1) => 0101 1000 & 0101 0111 => 0101 0000
      */
     public int turnOffRightMostOneBitOnUnsignedInt(int number) {
-        LOG.info("turn off right most 1-bit {} & {}", number,  number - 1);
+        LOGGER.info("turn off right most 1-bit {} & {}", number, number - 1);
         return (number & (number - 1));
     }
 }
